@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | NFT preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      :root {
+        /* color variables */
+        --primary-softBlue: hsl(215, 51%, 70%);
+        --primary-Cyan: hsl(178, 100%, 50%);
+
+        --main-BG-clr: hsl(228, 45%, 44%);
+        --card-BG-clr: hsl(216, 50%, 16%);
+        --line-clr: hsl(215, 32%, 27%);
+        --white: hsl(0, 0%, 100%);
+
+        /* font weight */
+        --font-thin: 300;
+        --font-regular: 400;
+        --font-bold: 600;
+
+        --border-radius: 10px;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Outfit", sans-serif;
+      }
+
+      .attribution {
+        color: rgb(168 168 168 /0.5);
+      }
+
+      .attribution a {
+        color: var(--main-BG-clr);
+      }
+
+      body {
+        background-color: hsl(217, 54%, 11%);
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card {
+        width: 15rem;
+        background-color: var(--card-BG-clr);
+        padding: 1em;
+        border-radius: var(--border-radius);
+        margin-bottom: 2rem;
+        box-shadow: 0 25px 0 15px rgb(0 0 0 /0.1),
+          0 30px 20px 50px rgb(0 0 0 /0.1);
+      }
+
+      .card > * {
+        margin-bottom: 1rem;
+      }
+
+      .item-image {
+        margin-bottom: 1.5rem;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .item-image img {
+        border-radius: var(--border-radius);
+        vertical-align: middle;
+        width: 100%;
+      }
+
+      .item-image:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: hsl(178 100% 50%/0.5) no-repeat url("images/icon-view.svg")
+          center center/20%;
+        border-radius: var(--border-radius);
+        opacity: 0;
+      }
+
+      .item-image:hover:before {
+        opacity: 1;
+      }
+
+      .item-name {
+        font-size: 1.1rem;
+        color: var(--white);
+        font-weight: var(--font-bold);
+        cursor: pointer;
+      }
+
+      .item-name:hover {
+        color: var(--primary-Cyan);
+      }
+
+      .description {
+        color: var(--primary-softBlue);
+        font-weight: var(--font-thin);
+        font-size: 0.9rem;
+      }
+
+      .status {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.8rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--line-clr);
+      }
+
+      .eth-price,
+      .time-left {
+        display: flex;
+        align-items: center;
+      }
+
+      .eth-price {
+        color: var(--primary-Cyan);
+      }
+
+      .time-left {
+        color: var(--primary-softBlue);
+      }
+
+      .eth-price img,
+      .time-left img {
+        margin-right: 0.4rem;
+      }
+
+      .credit{
+        margin-bottom: 0;
+      }
+
+      .credit p{
+        display: inline-block;
+        font-size: 0.8rem;
+        color: var(--primary-softBlue);
+      }
+
+      .credit img{
+        width: 15%;
+        vertical-align: middle;
+        border: 2px solid white;
+        border-radius: 50%;
+        margin-right: 1rem;
+      }
+
+      strong {
+        color: var(--white);
+        cursor: pointer;
+      }
+
+      strong:hover {
+        color: var(--primary-Cyan);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="item-image">
+          <img src="\images\image-equilibrium.jpg" alt="item-image" />
+        </div>
+        <p class="item-name">Equilibrium #3429</p>
+        <p class="description">
+          Our Equilibrium collection promotes balance and calm.
+        </p>
+        <div class="status">
+          <div class="eth-price">
+            <img src="images/icon-ethereum.svg" alt="" />
+            0.041 ETH
+          </div>
+          <div class="time-left">
+            <img src="images/icon-clock.svg" alt="" />
+            3 days left
+          </div>
+        </div>
+        <div class="credit">
+          <img src="images/image-avatar.png" class="profile-pic"></img>
+          <p>Creation of <strong>Jules Wyvern</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Joe Jai</a>.
+    </div>
+  </body>
+</html>
