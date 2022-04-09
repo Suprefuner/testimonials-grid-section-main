@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Advice generator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <script defer src="script.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
+
+      :root {
+        /* color */
+        --color-primary-cyan-light: hsl(193, 38%, 86%);
+        --color-primary-green-neon: hsl(150, 100%, 66%);
+        --color-blue-grayish: hsl(217, 19%, 38%);
+        --color-blue-grayish-dark: hsl(217, 19%, 24%);
+        --color-blue-dark: hsl(218, 23%, 16%);
+
+        /* break point */
+        --bp-mobile: 375px;
+        --bp-desktop: 1440px;
+      }
+
+      html {
+        box-sizing: border-box;
+      }
+
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+        list-style: none;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        background-color: var(--color-blue-dark);
+        font-family: "Manrope", sans-serif;
+      }
+
+      .sr-only {
+        display: none;
+      }
+
+      .container {
+        width: 90%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 10rem;
+        margin-bottom: 4rem;
+        padding: 2rem;
+        padding-bottom: 4rem;
+        background-color: var(--color-blue-grayish-dark);
+        border-radius: 0.75rem;
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      .advice__number {
+        color: var(--color-primary-green-neon);
+      }
+
+      .advice__quote {
+        color: var(--color-primary-cyan-light);
+        font-size: 28px;
+      }
+
+      .btn-change {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 4rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        border: none;
+        background-color: var(--color-primary-green-neon);
+        transform: translateY(50%);
+        transition: 0.3s;
+        cursor: pointer;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+      @media screen and (min-width: 375px) {
+        .container {
+          max-width: 35rem;
+        }
+      }
+
+      @media screen and (min-width: 50rem) {
+        .btn-change:hover {
+          box-shadow: 0 0 2rem var(--color-primary-green-neon);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="sr-only">Advice Generator</h1>
+    <div class="container">
+      <!-- <h4 class="advice__number">Advice #</h4>
+      <p class="advice__quote">"It is easy to sit up and take notice"</p>
+      <img src="./images/pattern-divider-mobile.svg" alt="" />
+      <button class="btn-change">
+        <img src="./images/icon-dice.svg" alt="" />
+      </button> -->
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Joe</a>.
+    </div>
+  </body>
+</html>
