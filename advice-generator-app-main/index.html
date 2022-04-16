@@ -63,6 +63,7 @@
 
       .container {
         width: 90%;
+        min-width: 340px;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -88,14 +89,14 @@
         font-size: 28px;
       }
 
-      .btn-change {
+      #btn-change {
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
         margin: auto;
         width: 4rem;
-        aspect-ratio: 1;
+        height: 4rem;
         border-radius: 50%;
         border: none;
         background-color: var(--color-primary-green-neon);
@@ -104,22 +105,17 @@
         cursor: pointer;
       }
 
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-
       @media screen and (min-width: 375px) {
+        body {
+          justify-content: center;
+        }
         .container {
           max-width: 35rem;
         }
       }
 
-      @media screen and (min-width: 50rem) {
-        .btn-change:hover {
+      @media (hover: hover) {
+        #btn-change:hover {
           box-shadow: 0 0 2rem var(--color-primary-green-neon);
         }
       }
@@ -127,20 +123,23 @@
   </head>
   <body>
     <h1 class="sr-only">Advice Generator</h1>
-    <div class="container">
-      <!-- <h4 class="advice__number">Advice #</h4>
-      <p class="advice__quote">"It is easy to sit up and take notice"</p>
-      <img src="./images/pattern-divider-mobile.svg" alt="" />
-      <button class="btn-change">
+    <main class="container">
+      <h4 class="advice__number">Advice #</h4>
+      <blockquote class="advice__quote">""</blockquote>
+      <picture>
+        <source
+          media="(max-width: 550px)"
+          srcset="./images/pattern-divider-mobile.svg"
+        />
+        <source
+          media="(min-width: 551px)"
+          srcset="./images/pattern-divider-desktop.svg"
+        />
+        <img src="./images/pattern-divider-mobile.svg" alt="divider" />
+      </picture>
+      <button id="btn-change" aria-label="Button to render new advice">
         <img src="./images/icon-dice.svg" alt="" />
-      </button> -->
-    </div>
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Joe</a>.
-    </div>
+      </button>
+    </main>
   </body>
 </html>
